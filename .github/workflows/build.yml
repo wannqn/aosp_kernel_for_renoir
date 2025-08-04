@@ -48,7 +48,7 @@ jobs:
           echo "RELEASE_TAG=$(echo $releaseFile | sed -e 's/^Kernel-//' -e 's/.zip$//')" >> $GITHUB_ENV
 
       - name: Upload kernel
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: renoir
           path: ${{ env.RELEASE_FILE }}
